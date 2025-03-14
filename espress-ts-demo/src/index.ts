@@ -20,13 +20,13 @@ const app = express();                                      // crea un'istanza d
 const port = process.env.PORT || 3000;                      // process.env.PORT è la porta che viene passata da heroku
 
 const lezioni = [
-    { id: 1, titolo: 'Introduzione a TypeScript' },
-    { id: 2, titolo: 'Introduzione a Node.js' },
-    { id: 3, titolo: 'Introduzione a Express' },         // array di oggetti
+  { id: 1, titolo: 'Advanced TypeScript Techniques' },
+  { id: 2, titolo: 'Building REST APIs with Node.js' },
+  { id: 3, titolo: 'Mastering Express Middleware' },
 ];
 
 app.get('/', (req: Request, res: Response) => {             // definisce una route, invio una richiesta GET alla radice del server (root)
-  res.send('Hello, TypeScript with Express!');              // risponde con una stringa
+  res.sendFile(__dirname + '/index.html');                  // invia un file html
 });                                                         // req e res sono oggetti di tipo Request e Response
 
 
